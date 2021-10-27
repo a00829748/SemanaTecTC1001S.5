@@ -52,43 +52,73 @@ def circle2(start, end):
 
 
 def triangle(start, end):
+
     #sube el lapiz
+
     up()
+
     goto(start.x, start.y)
+
     #se baja el lapiz para dibujar
+
     down()
+
     #iniciar el fill para rellenar
+
     begin_fill()
     
+
     #se calcula la distancia entre cada vertice del triangulo
+
     forward(end.x - start.x)
+
     for count in range(2):
+
         #Gira para poder cerrar el triángulo
+
         left(120)
+
         #el tramo de vértice a vértice
+
         forward(end.x - start.x)
     
+
     end_fill()
 
 
 
 def triangle(start, end):
+
     #sube el lapiz
+
     up()
+
     goto(start.x, start.y)
+
     #se baja el lapiz para dibujar
+
     down()
+
     #iniciar el fill para rellenar
+
     begin_fill()
     
+
     #se calcula la distancia entre cada vertice del triangulo
+
     forward(end.x - start.x)
+
     for count in range(2):
+
         #Gira para poder cerrar el triángulo
+
         left(120)
+
         #el tramo de vértice a vértice
+
         forward(end.x - start.x)
     
+
     end_fill()
 
 
