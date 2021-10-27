@@ -48,13 +48,48 @@ def circle2(start, end):
 
 def rectangle(start, end):
     "Draw rectangle from start to end."
-    pass  # TODO
+    #sube el lapiz
+    up()
+    goto(start.x, start.y)
+    #se baja el lapiz para dibujar
+    down()
+    #iniciar el fill pa/ rellenar
+    begin_fill()
+    
+    #se ejecutara 2 veces
+    for count in range(2):
+    #se calcula la distancia en el eje de las x
+        forward(end.x - start.x)
+    #se voltea 90 grados
+        left(90)
+    #se calcula la distancia en el eje de las y
+        forward(end.y - start.y)
+    #Se vuelve a voltear 90 grados para cerrar.
+        left(90)
+    
+    end_fill()
 
 
 def triangle(start, end):
     "Draw triangle from start to end."
-    pass  # TODO
-
+    #sube el lapiz
+    up()
+    goto(start.x, start.y)
+    #se baja el lapiz para dibujar
+    down()
+    #iniciar el fill para rellenar
+    begin_fill()
+    
+    #se calcula la distancia entre cada vertice del triangulo
+    forward(end.x - start.x)
+    for count in range(2):
+        #Gira para poder cerrar el triángulo
+        left(120)
+        #el tramo de vértice a vértice
+        forward(end.x - start.x)
+    
+    end_fill()
+    
 
 def tap(x, y):
     "Store starting point or draw shape."
