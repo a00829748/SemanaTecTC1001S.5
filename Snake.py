@@ -25,6 +25,10 @@ snake_color = choice(colores)
 colores.remove(snake_color)
 #Elegir el color de la comida
 food_color = choice(colores)
+#Remover el color en uso
+colores.remove(food_color)
+#agregar el color de backround
+bgcolor(choice(colores))
 
 def change(x, y):
     "Change snake direction."
@@ -74,6 +78,7 @@ def info_alumnos():
     writer.color('red')
     writer.write("Ricardo Olmedo")
 
+writer = Turtle(visible=False)
 info_alumnos()
 setup(420, 420, 370, 0)
 hideturtle()
