@@ -29,6 +29,7 @@ food_color = choice(colores)
 colores.remove(food_color)
 #agregar el color de backround
 bgcolor(choice(colores))
+mov_food = [vector(10,0),vector(-10,0),vector(0,20),vector(0,-20)]
 
 def change(x, y):
     "Change snake direction."
@@ -43,6 +44,7 @@ def inside(head):
 
 def move():
     "Move snake forward one segment."
+    global food
     head = snake[-1].copy()
     head.move(aim)
 
@@ -60,6 +62,14 @@ def move():
     else:
         snake.pop(0)
 
+    food_aux = food.copy()
+    food_aux.move(choice(mov_food))
+    
+    while not inside(food_aux) or food_aux in snake:
+        food_aux.move(choice(mov_food))
+        
+    food = food_aux
+    
     clear()
 
     for body in snake:
@@ -67,7 +77,7 @@ def move():
 
     square(food.x, food.y, 9, food_color) #se diversifica el color del food
     update()
-    ontimer(move, 100)
+    ontimer(move, 500)
 
 def info_alumnos():
     writer.up()
