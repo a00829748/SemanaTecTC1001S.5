@@ -65,7 +65,16 @@ def move():
     update()
     ontimer(move, 100)
 
+def info_alumnos():
+    writer.up()
+    writer.goto(0, 190)
+    writer.color('red')
+    writer.write("Samuel Acosta")
+    writer.goto(0, 170)
+    writer.color('red')
+    writer.write("Ricardo Olmedo")
 
+info_alumnos()
 setup(420, 420, 370, 0)
 hideturtle()
 tracer(False)
