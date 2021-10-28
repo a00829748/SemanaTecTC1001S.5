@@ -9,7 +9,7 @@ Exercises
 
 """
 
-from random import randrange
+from random import randrange, choice
 from turtle import *
 
 from freegames import square, vector
@@ -17,7 +17,14 @@ from freegames import square, vector
 food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
-
+#lista de colores que puede tomar snake y la comida
+colores = ['green','orange','yellow','blue','purple','#00FFF3','#000000','#FFFFFF','pink','grey','#003300','cyan']
+#Se elige el color para el snake
+snake_color = choice(colores)
+#Se quita la opcion de color para no repetir
+colores.remove(snake_color)
+#Elegir el color de la comida
+food_color = choice(colores)
 
 def change(x, y):
     "Change snake direction."
@@ -52,9 +59,9 @@ def move():
     clear()
 
     for body in snake:
-        square(body.x, body.y, 9, 'black')
+        square(body.x, body.y, 9, snake_color) #se diversifica el color del snake
 
-    square(food.x, food.y, 9, 'green')
+    square(food.x, food.y, 9, food_color) #se diversifica el color del food
     update()
     ontimer(move, 100)
 
