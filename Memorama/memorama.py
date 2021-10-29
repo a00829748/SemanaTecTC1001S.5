@@ -16,7 +16,7 @@ from turtle import *
 from freegames import path
 
 car = path('car.gif')
-tiles = list(range(32)) * 2
+tiles = ['fresa','manzana','banana','naranja','durazno','sandia','melon','limon','coco','kiwi','cereza','ciruela','mora','uva','pera','mango','papaya','frambuesa','pina','toronja','aguacate','arandanos','granadas','aceitunas','guayava','avellana','almendra','cacahuate','carambola','pepino','zapote','tamarindo'] * 2
 state = {'mark': None}
 # lista indica cantidad de cartas escondidas
 hide = [True] * 64
