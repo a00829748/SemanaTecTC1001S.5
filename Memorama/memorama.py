@@ -21,6 +21,7 @@ state = {'mark': None}
 # lista indica cantidad de cartas escondidas
 hide = [True] * 64
 i=0
+contar_pares=0
 
 
 def square(x, y):
@@ -48,7 +49,7 @@ def xy(count):
 
 def tap(x, y):
     "Update mark and hidden tiles based on tap."
-    global i
+    global i, contar_pares
     #se obtiene el indice sobre la cual se dio click
     spot = index(x, y)
     #obtiene el estado actual del memo
@@ -59,6 +60,7 @@ def tap(x, y):
     if mark is None or mark == spot or tiles[mark] != tiles[spot]:
         state['mark'] = spot
     else:
+        contar_pares+=1
         # son pares, se hace visible poniendo False e inicializa state en None
         hide[spot] = False
         hide[mark] = False
@@ -93,6 +95,12 @@ def draw():
         goto(x + 2, y)
         color('black')
         write(tiles[mark], font=('Arial', 30, 'normal'))
+        
+    if contar_pares==32:
+        up()
+        goto(-100, 200)
+        color('purple')
+        write("GANASTE")
 
     update()
     ontimer(draw, 100)
