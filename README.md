@@ -6,8 +6,8 @@
 - Agragar codigo para color nuevo
 - Agregar codigo para circulo
 - Agregar codigo para mostrar integrantes
-## Agregar el codigo inicial y README - Samuel Acosta
-```
+## Agregar el codigo inicial y README - Samuel Acosta 100
+```Python
 """Paint, for drawing shapes.
 
 Exercises
@@ -159,8 +159,8 @@ onkey(lambda: color('B350FF'), 'P') # P de purple porque el color es morado
     circle(r)
     end_fill()  # TODO
 ```
-## Integrar el codigo para mostrar nombres de los integrantes - Ricardo Olmedo
-```
+## Integrar el codigo para mostrar nombres de los integrantes - Ricardo Olmedo 100
+```python
 def info_alumnos():
     writer.up()
     writer.goto(0, 190)
