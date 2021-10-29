@@ -4,8 +4,8 @@
 - Samuel Acosta
 - Ricardo Olmedo
 
-## Video:
-
+## Video Reflexion:
+https://www.youtube.com/watch?v=J3oh6vB2UQ4
 
 ## Cosas que se realizaron
 - Agregar codigo inicial y README inicial
@@ -157,3 +157,5 @@ if contar_pares==32:
 ['fresa','manzana','banana','naranja','durazno','sandia','melon','limon','coco','kiwi','cereza','ciruela','mora','uva','pera','mango','papaya','frambuesa','pina','toronja','aguacate','arandanos','granadas','aceitunas','guayava','avellana','almendra','cacahuate','carambola','pepino','zapote','tamarindo']
 list(range(32))
 
+## GIF del Programa
+![alt text](ezgif-2-694dfc67131f.gif)
