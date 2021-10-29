@@ -20,6 +20,7 @@ tiles = list(range(32)) * 2
 state = {'mark': None}
 # lista indica cantidad de cartas escondidas
 hide = [True] * 64
+i=0
 
 
 def square(x, y):
@@ -47,10 +48,12 @@ def xy(count):
 
 def tap(x, y):
     "Update mark and hidden tiles based on tap."
+    global i
     #se obtiene el indice sobre la cual se dio click
     spot = index(x, y)
     #obtiene el estado actual del memo
     mark = state['mark']
+    i+=1
 
     # Verifica si no son pares deja en state la ultima carta seleccionada
     if mark is None or mark == spot or tiles[mark] != tiles[spot]:
@@ -68,7 +71,11 @@ def draw():
     goto(0, 0)
     shape(car)
     stamp()
-
+    up()
+    goto(0, 200)
+    color('red')
+    write("Numero de taps: "+str(i))
+    update()
     # ciclo que dibuja las cartas que estan ocultas
     # inicando en la esquina inferior izquierda -200, -200
     for count in range(64):
