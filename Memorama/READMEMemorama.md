@@ -1,8 +1,8 @@
 # Memorama
 
 ## Integrantes:
-- Samuel Acosta
-- Ricardo Olmedo
+- Samuel Acosta Calificación 100 👏👏
+- Ricardo Olmedo Calificación 100 👏👏
 
 ## Video Reflexion:
 https://www.youtube.com/watch?v=J3oh6vB2UQ4
@@ -14,6 +14,8 @@ https://www.youtube.com/watch?v=J3oh6vB2UQ4
 - Utilizar algo diferente a los dígitos para resolver el juego y que al usuario le ayude a tener mejor memoria
 
 ## Agregar codigo inicial y README inicial
+
+´´´python
 """Memory, puzzle game of number pairs.
 
 Exercises:
