@@ -1,8 +1,8 @@
 # Memorama
 
 ## Integrantes:
-- Samuel Acosta
-- Ricardo Olmedo
+- Samuel Acosta Calificación 100 👏👏
+- Ricardo Olmedo Calificación 100 👏👏
 
 ## Video Reflexion:
 https://www.youtube.com/watch?v=J3oh6vB2UQ4
